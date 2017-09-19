@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="get_install_sign_failure">获取当前版本App签名失败，请通过应用市场下载安装</string>
+    <string name="get_uninstall_sign_failure">获取更新包App签名失败，请通过应用市场下载安装</string>
+    <string name="sign_different">当前版本App与更新包App签名不一致，请通过应用市场下载安装</string>
+
+    <string name="app_sd_root_dir">云宠寄养</string>
+
+</resources>

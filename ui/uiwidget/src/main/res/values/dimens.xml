@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--定义APP字体大小-->
+    <dimen name="line_1px">0.5dp</dimen>
+
+    <dimen name="px20">10dp</dimen>
+    <dimen name="px36">10dp</dimen>
+    <dimen name="px4">2dp</dimen>
+    <dimen name="size6px">3dp</dimen>
+</resources>

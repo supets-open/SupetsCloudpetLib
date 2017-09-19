@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="app_holo_theme" parent="@android:style/Theme.Holo.Light" />
+
+    <style name="app_theme" parent="app_compat_theme" />
+
+    <style name="app_compat_theme" parent="Theme.AppCompat.Light" />
+
+    <style name="app_dialog_holo_theme" parent="@android:style/Theme.Holo.Light.Dialog" />
+
+    <style name="app_dialog_theme" parent="app_compat_dialog_theme" />
+
+    <style name="app_compat_dialog_theme" parent="Theme.AppCompat.Light.Dialog" />
+
+    <style name="ImageTranslucentTheme" parent="app_theme">
+        <!--在Android 4.4之前的版本上运行，直接跟随系统主题-->
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppBaseTheme" parent="app_theme" />
+
+    <style name="DialogBaseTheme" parent="app_dialog_theme" />
+
+
+    <!--base-->
+    <!--疯狂桔子沉侵式主题-->
+    <style name="AppTranslucentTheme" parent="ImageTranslucentTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <!--疯狂桔子主题-->
+    <style name="SupetPetBaseTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="CustomAppTheme" parent="AppTranslucentTheme" />
+
+    <style name="CustomAppTheme.FullScreen" parent="CustomAppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="CustomAppTheme.Transparent" parent="CustomAppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <style name="CustomAppTheme.FullScreen.Transparent" parent="CustomAppTheme.FullScreen">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+</resources>

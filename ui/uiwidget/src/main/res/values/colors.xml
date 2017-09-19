@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--定义APP主题色-->
+    <color name="app_color">#4183ff</color>
+    <!--占位图-->
+    <color name="place_holder">#f0f0f0</color>
+    <drawable name="place_holder">@color/place_holder</drawable>
+    <!--背景色-->
+    <color name="bg_page">#fff6f6f6</color>
+    <!--线颜色-->
+    <color name="line_color">@color/color_e5e5e5</color>
+    <!--定义banner指示器颜色-->
+    <color name="page_indicator_selected">@color/app_color</color>
+    <color name="page_indicator_normal">#80d6d6d6</color>
+    <color name="white">#ffffff</color>
+    <color name="color_e5e5e5">#e5e5e5</color>
+
+</resources>

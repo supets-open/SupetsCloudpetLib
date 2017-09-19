@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabRootView"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/float_tab_height"
+    android:background="@color/white"
+>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/tab_item_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"/>
+    </HorizontalScrollView>
+
+
+    <View
+        android:id="@+id/line"
+        style="@style/line_horizontal"
+        android:layout_alignParentBottom="true" />
+
+    <com.supets.pet.uiwidget.UnderlinePageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px4"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

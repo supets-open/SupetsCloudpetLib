@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="app_holo_theme" parent="@android:style/Theme.Holo.Light.NoActionBar" />
+
+    <style name="app_theme" parent="app_compat_theme" />
+
+    <style name="app_compat_theme" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <style name="app_dialog_holo_theme" parent="@android:style/Theme.Holo.Light.Dialog" />
+
+    <style name="app_dialog_theme" parent="app_compat_dialog_theme" />
+
+    <style name="app_compat_dialog_theme" parent="Theme.AppCompat.Light.Dialog" />
+
+    <style name="ImageTranslucentTheme" parent="app_theme">
+        <!--在Android 4.4之前的版本上运行，直接跟随系统主题-->
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppBaseTheme" parent="app_theme" />
+
+    <style name="DialogBaseTheme" parent="app_dialog_theme" />
+
+</resources>

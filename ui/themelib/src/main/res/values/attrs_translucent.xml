@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TranslucentLinearLayout">
+        <attr name="statusbar_color" format="reference" />
+        <attr name="background_color" format="reference" />
+        <attr name="tanslucent_mode"  >
+            <enum name="statusbarcolor_mode" value="1"/>
+            <enum name="backimage_mode_only_activity" value="2"/>
+            <enum name="backimage_statusbarcolor_mode" value="3"/>
+            <enum name="backcolor_mode_only_activity" value="4"/>
+            <enum name="none" value="5"/>
+        </attr>
+    </declare-styleable>
+
+</resources>

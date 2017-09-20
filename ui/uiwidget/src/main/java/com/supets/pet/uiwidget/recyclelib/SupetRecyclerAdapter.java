@@ -1,54 +1,60 @@
 package com.supets.pet.uiwidget.recyclelib;
 
-import android.support.v4.util.SparseArrayCompat;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.view.View;
+import android.content.Context;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 
 import com.supets.coredata.MYData;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Author:          zgl_dmw
- * Email:           2559531803@qq.com
- * Date:            2016/8/10 17:52
- * Description:     SupetRecyclerAdapter
- */
-public abstract class SupetRecyclerAdapter extends RecyclerView.Adapter<SupetRecyclerViewHolder> {
 
-    private static final int BASE_ITEM_TYPE_HEADER = 100000;
-    private static final int BASE_ITEM_TYPE_FOOTER = 200000;
-    private SparseArrayCompat<View> mHeaderViews = new SparseArrayCompat<>();
-    private SparseArrayCompat<View> mFooterViews = new SparseArrayCompat<>();
+public abstract class SupetRecyclerAdapter {
+
+    public abstract int getItemViewType(int position);
+
+//    public interface ItemOnClickListener{
+//        void onclick(View view, int position);
+//        void onItemLongClick(View view, int position);
+//    }
+
+//    ItemOnClickListener mItemOnClickListener;
+//
+//    public ItemOnClickListener getItemOnClickListener() {
+//        return mItemOnClickListener;
+//    }
+//
+//    public void setItemOnClickListener(ItemOnClickListener mItemOnClickListener) {
+//        this.mItemOnClickListener = mItemOnClickListener;
+//    }
+
     private List<MYData> mDatas = new ArrayList<>();
 
-    private boolean isHeaderViewPos(int position) {
-        return position < getHeadersCount();
+    private Context mContext;
+
+    public Context getContext() {
+        return mContext;
     }
 
-    private boolean isFooterViewPos(int position) {
-        return position >= getHeadersCount() + mDatas.size();
+    private SupetRecyclerView.SupetRecyclerViewAdapter mDRecyclerViewAdapter;
+
+    private int itemHeight;
+
+    public int getItemHeight() {
+        return itemHeight;
     }
 
-
-    public void addHeaderView(View view) {
-        mHeaderViews.put(mHeaderViews.size() + BASE_ITEM_TYPE_HEADER, view);
+    public SupetRecyclerView.SupetRecyclerViewAdapter getmDRecyclerViewAdapter() {
+        return mDRecyclerViewAdapter;
     }
 
-    public void addFooterView(View view) {
-        mFooterViews.put(mFooterViews.size() + BASE_ITEM_TYPE_FOOTER, view);
+    public void setRealRecyclerViewAdapter(SupetRecyclerView.SupetRecyclerViewAdapter mDRecyclerViewAdapter) {
+        this.mDRecyclerViewAdapter = mDRecyclerViewAdapter;
     }
 
-    public int getHeadersCount() {
-        return mHeaderViews.size();
-    }
-
-    public int getFootersCount() {
-        return mFooterViews.size();
+    public SupetRecyclerAdapter(Context mContext) {
+        this.mContext = mContext;
     }
 
     public <T extends MYData> void addHomePage(List<T> data) {
@@ -62,10 +68,84 @@ public abstract class SupetRecyclerAdapter extends RecyclerView.Adapter<SupetRec
     public <T extends MYData> void addNextPage(List<T> data) {
         if (data != null) {
             int itemCount = data.size();
-            int postionStart = getHeadersCount() + mDatas.size();
+            int postionStart = getItemCount();
             this.mDatas.addAll(data);
             notifyItemRangeInserted(postionStart, itemCount);
         }
+    }
+
+    public <T extends MYData> void addNextPage(T  data) {
+        if (data != null) {
+            int itemCount = 1;
+            int postionStart = getItemCount();
+            this.mDatas.add(data);
+            notifyItemRangeInserted(postionStart, itemCount);
+        }
+    }
+
+    public SupetRecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        final SupetRecyclerViewHolder holder = onCreateViewHolder(parent, viewType, this);
+        holder.getWholeView().getViewTreeObserver().addOnPreDrawListener(
+                new ViewTreeObserver.OnPreDrawListener() {
+                    @Override
+                    public boolean onPreDraw() {
+                        itemHeight = holder.getWholeView().getMeasuredHeight();
+                        return true;
+                    }
+                }
+        );
+        return holder;
+    }
+
+
+    public void onBindViewHolder(SupetRecyclerViewHolder holder, int position) {
+        holder.setData(mDatas.get(position), position);
+    }
+
+    public int getItemCount() {
+        return mDatas.size();
+    }
+
+    public boolean isFullSpan(int position) {
+        return false;
+    }
+
+
+    public abstract SupetRecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType, SupetRecyclerAdapter dBaseRecyclerViewAdapter);
+
+
+    public void notifyDataSetChanged() {
+        mDRecyclerViewAdapter.notifyDataSetChanged();
+    }
+
+    public void notifyItemChanged(int position) {
+        position = mDRecyclerViewAdapter.getHeaderViewsCount() + position;
+        mDRecyclerViewAdapter.notifyItemChanged(position);
+    }
+
+    public void notifyItemInserted(int position) {
+        position = mDRecyclerViewAdapter.getHeaderViewsCount() + position;
+        mDRecyclerViewAdapter.notifyItemInserted(position);
+    }
+
+    public void notifyItemRemoved(int position) {
+        position = mDRecyclerViewAdapter.getHeaderViewsCount() + position;
+        mDRecyclerViewAdapter.notifyItemRemoved(position);
+    }
+
+    public void notifyItemRangeChanged(int positionStart, int itemCount) {
+        positionStart = mDRecyclerViewAdapter.getHeaderViewsCount() + positionStart;
+        mDRecyclerViewAdapter.notifyItemRangeChanged(positionStart, itemCount);
+    }
+
+    public void notifyItemRangeInserted(int positionStart, int itemCount) {
+        positionStart = mDRecyclerViewAdapter.getHeaderViewsCount() + positionStart;
+        mDRecyclerViewAdapter.notifyItemRangeInserted(positionStart, itemCount);
+    }
+
+    public void notifyItemRangeRemoved(int positionStart, int itemCount) {
+        positionStart = mDRecyclerViewAdapter.getHeaderViewsCount() + positionStart;
+        mDRecyclerViewAdapter.notifyItemRangeRemoved(positionStart, itemCount);
     }
 
     public List<MYData> getData() {
@@ -73,86 +153,10 @@ public abstract class SupetRecyclerAdapter extends RecyclerView.Adapter<SupetRec
     }
 
     public MYData getData(int position) {
-        return mDatas.get(position - getHeadersCount());
+        return mDatas.get(position);
     }
 
     public boolean isEmpty() {
         return mDatas.isEmpty();
     }
-
-    @Override
-    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
-        RecyclerView.LayoutManager layoutManager = recyclerView.getLayoutManager();
-        if (layoutManager instanceof GridLayoutManager) {
-            final GridLayoutManager gridLayoutManager = (GridLayoutManager) layoutManager;
-
-            gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
-                @Override
-                public int getSpanSize(int position) {
-                    if (isHeaderViewPos(position) || isFooterViewPos(position) || isFullSpan(position)) {
-                        return gridLayoutManager.getSpanCount();
-                    }
-                    return 1;
-                }
-            });
-            gridLayoutManager.setSpanCount(gridLayoutManager.getSpanCount());
-        }
-    }
-
-    @Override
-    public void onViewAttachedToWindow(SupetRecyclerViewHolder holder) {
-        ViewGroup.LayoutParams lp = holder.itemView.getLayoutParams();
-        if (lp != null && lp instanceof StaggeredGridLayoutManager.LayoutParams) {
-            int position = holder.getLayoutPosition();
-            if (isHeaderViewPos(position) || isFooterViewPos(position) || isFullSpan(position)) {
-                StaggeredGridLayoutManager.LayoutParams p = (StaggeredGridLayoutManager.LayoutParams) lp;
-                p.setFullSpan(true);
-            }
-        }
-    }
-
-    @Override
-    public SupetRecyclerViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        if (mHeaderViews.get(viewType) != null) {
-            return new SupetRecyclerViewHolder(mHeaderViews.get(viewType));
-
-        } else if (mFooterViews.get(viewType) != null) {
-            return new SupetRecyclerViewHolder(mFooterViews.get(viewType));
-        }
-        return onCreateHolder(viewGroup, viewType);
-    }
-
-    protected abstract SupetRecyclerViewHolder onCreateHolder(ViewGroup viewGroup, int viewType);
-
-    @Override
-    public void onBindViewHolder(SupetRecyclerViewHolder viewHolder, int position) {
-        if (isHeaderViewPos(position)) {
-            return;
-        }
-        if (isFooterViewPos(position)) {
-            return;
-        }
-        onBindHolder(viewHolder, position);
-    }
-
-    protected abstract void onBindHolder(SupetRecyclerViewHolder viewHolder, int position);
-
-    protected abstract boolean isFullSpan(int position);
-
-    @Override
-    public int getItemCount() {
-        return getHeadersCount() + getFootersCount() + mDatas.size();
-    }
-
-    @Override
-    public int getItemViewType(int position) {
-        if (isHeaderViewPos(position)) {
-            return mHeaderViews.keyAt(position);
-        } else if (isFooterViewPos(position)) {
-            return mFooterViews.keyAt(position - getHeadersCount() - mDatas.size());
-        }
-        return getItemType(position);
-    }
-
-    protected abstract int getItemType(int position);
 }

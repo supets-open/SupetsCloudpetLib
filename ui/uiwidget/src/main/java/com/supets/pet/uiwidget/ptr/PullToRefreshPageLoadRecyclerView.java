@@ -9,7 +9,7 @@ import android.widget.FrameLayout;
 
 import com.supets.commons.widget.PageLoadingView;
 import com.supets.pet.supetsbaseui.R;
-import com.supets.pet.uiwidget.recyclelib.SupetRecyclerView;
+import com.supets.pet.uiwidget.recyclelib.SupetRecyclerView2;
 import com.supets.pet.uiwidget.recyclelib.SupetRecyclerViewScrollListener;
 
 import in.srain.cube.views.ptr.PtrDefaultHandler;
@@ -22,11 +22,11 @@ import in.srain.cube.views.ptr.PtrHandler;
  * Date:            2016/8/11 10:35
  * Description:     PullToRefreshPageLoadRecyclerView
  */
-public class PullToRefreshPageLoadRecyclerView extends PullToRefreshBase<SupetRecyclerView> implements PtrHandler {
+public class PullToRefreshPageLoadRecyclerView extends PullToRefreshBase<SupetRecyclerView2> implements PtrHandler {
     private PageLoadingView mContent;
-    private SupetRecyclerView mListView;
+    private SupetRecyclerView2 mListView;
     private OnLoadMoreListener mLoadMoreListener;
-    private OnRefreshListener<SupetRecyclerView> mRefreshListener;
+    private OnRefreshListener<SupetRecyclerView2> mRefreshListener;
 
     private View mItemLoadingView;
     private OnLoadMoreViewHandlerListener mOnLoadViewHandler;
@@ -52,7 +52,7 @@ public class PullToRefreshPageLoadRecyclerView extends PullToRefreshBase<SupetRe
 
     private void initView(AttributeSet attrs) {
         mContent = new PageLoadingView(getContext());
-        mListView = new SupetRecyclerView(getContext(), attrs);
+        mListView = new SupetRecyclerView2(getContext(), attrs);
 
         mListView.setHasFixedSize(true);
         mListView.setId(android.R.id.list);
@@ -170,7 +170,7 @@ public class PullToRefreshPageLoadRecyclerView extends PullToRefreshBase<SupetRe
         mItemLoadingView.findViewById(R.id.contentload).setVisibility(View.GONE);
     }
 
-    public final SupetRecyclerView getRecyclerView() {
+    public final SupetRecyclerView2 getRecyclerView() {
         return mListView;
     }
 
@@ -186,7 +186,7 @@ public class PullToRefreshPageLoadRecyclerView extends PullToRefreshBase<SupetRe
     }
 
     @Override
-    public void setOnRefreshListener(OnRefreshListener<SupetRecyclerView> listener) {
+    public void setOnRefreshListener(OnRefreshListener<SupetRecyclerView2> listener) {
         mRefreshListener = listener;
     }
 

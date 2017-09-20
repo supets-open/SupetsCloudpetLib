@@ -9,8 +9,8 @@ import android.widget.FrameLayout;
 
 import com.supets.commons.widget.PageLoadingView;
 import com.supets.pet.supetsbaseui.R;
-import com.supets.pet.uiwidget.recyclelib.SupetRecyclerAdapter2;
-import com.supets.pet.uiwidget.recyclelib.SupetRecyclerView2;
+import com.supets.pet.uiwidget.recyclelib.SupetRecyclerAdapter;
+import com.supets.pet.uiwidget.recyclelib.SupetRecyclerView;
 import com.supets.pet.uiwidget.recyclelib.SupetRecyclerViewScrollListener;
 
 import in.srain.cube.views.ptr.PtrDefaultHandler;
@@ -20,32 +20,32 @@ import in.srain.cube.views.ptr.PtrHandler;
 /**
  * 支持load，内容，未登录，空页面，网络错误，默认有无数据支持下拉刷新。
  */
-public class PullToRefreshPageLoadRecyclerView2 extends PullToRefreshBase<SupetRecyclerView2> implements PtrHandler {
+public class PullToRefreshPageLoadRecyclerView extends PullToRefreshBase<SupetRecyclerView> implements PtrHandler {
 
     private PageLoadingView mContent;
-    private SupetRecyclerView2 mListView;
+    private SupetRecyclerView mListView;
     private OnLoadMoreListener mOnLoadMoreListener;
-    private OnRefreshListener<SupetRecyclerView2> mListener;
+    private OnRefreshListener<SupetRecyclerView> mListener;
 
     private View mItemLoadingView;
     private OnLoadMoreViewHandlerListener mOnLoadViewHandler;
 
-    public PullToRefreshPageLoadRecyclerView2(Context context) {
+    public PullToRefreshPageLoadRecyclerView(Context context) {
         this(context, null);
     }
 
-    public PullToRefreshPageLoadRecyclerView2(Context context, AttributeSet attrs) {
+    public PullToRefreshPageLoadRecyclerView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public PullToRefreshPageLoadRecyclerView2(Context context, AttributeSet attrs, int defStyle) {
+    public PullToRefreshPageLoadRecyclerView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         initview(attrs);
     }
 
     private void initview(AttributeSet attrs) {
         mContent = new PageLoadingView(getContext());
-        mListView = new SupetRecyclerView2(getContext(), attrs);
+        mListView = new SupetRecyclerView(getContext(), attrs);
         mItemLoadingView = LayoutInflater.from(getContext()).inflate(R.layout.item_loadmore, null);
         mListView.addFooterView(mItemLoadingView);
 
@@ -135,11 +135,11 @@ public class PullToRefreshPageLoadRecyclerView2 extends PullToRefreshBase<SupetR
         }
     }
 
-    public final SupetRecyclerView2 getRefreshableView() {
+    public final SupetRecyclerView getRefreshableView() {
         return mListView;
     }
 
-    public void setAdapter(SupetRecyclerAdapter2 adapter) {
+    public void setAdapter(SupetRecyclerAdapter adapter) {
         mListView.setAdapter(adapter);
     }
 
@@ -148,7 +148,7 @@ public class PullToRefreshPageLoadRecyclerView2 extends PullToRefreshBase<SupetR
     }
 
     @Override
-    public void setOnRefreshListener(final OnRefreshListener<SupetRecyclerView2> refreshListener) {
+    public void setOnRefreshListener(final OnRefreshListener<SupetRecyclerView> refreshListener) {
         this.mListener = refreshListener;
     }
 

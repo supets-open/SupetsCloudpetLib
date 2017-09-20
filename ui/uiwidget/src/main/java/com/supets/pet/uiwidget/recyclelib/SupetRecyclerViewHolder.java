@@ -6,14 +6,14 @@ import android.view.View;
 
 import com.supets.coredata.MYData;
 
-public class SupetRecyclerViewHolder2 extends RecyclerView.ViewHolder {
+public class SupetRecyclerViewHolder extends RecyclerView.ViewHolder {
 
-    public SupetRecyclerView2.SupetRecyclerViewAdapter mDRecyclerViewAdapter;
-    public SupetRecyclerAdapter2 mDBaseRecyclerViewAdapter;
+    public SupetRecyclerView.SupetRecyclerViewAdapter mDRecyclerViewAdapter;
+    public SupetRecyclerAdapter mDBaseRecyclerViewAdapter;
     private View mWholeView;
 
 
-    public SupetRecyclerViewHolder2(View itemView, SupetRecyclerAdapter2 mDBaseRecyclerViewAdapter) {
+    public SupetRecyclerViewHolder(View itemView, SupetRecyclerAdapter mDBaseRecyclerViewAdapter) {
         super(itemView);
         mWholeView=itemView;
         this.mDRecyclerViewAdapter = mDBaseRecyclerViewAdapter.getmDRecyclerViewAdapter();

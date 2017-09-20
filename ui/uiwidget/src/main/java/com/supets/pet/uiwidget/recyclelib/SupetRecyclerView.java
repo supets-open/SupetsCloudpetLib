@@ -11,19 +11,19 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-public class SupetRecyclerView2 extends RecyclerView {
+public class SupetRecyclerView extends RecyclerView {
 
     private SupetRecyclerViewAdapter dRecyclerViewAdapter = new SupetRecyclerViewAdapter();
 
-    public SupetRecyclerView2(Context context) {
+    public SupetRecyclerView(Context context) {
         super(context);
     }
 
-    public SupetRecyclerView2(Context context, @Nullable AttributeSet attrs) {
+    public SupetRecyclerView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public SupetRecyclerView2(Context context, @Nullable AttributeSet attrs, int defStyle) {
+    public SupetRecyclerView(Context context, @Nullable AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 
@@ -35,7 +35,7 @@ public class SupetRecyclerView2 extends RecyclerView {
         dRecyclerViewAdapter.addFooterView(view);
     }
 
-    public void setAdapter(SupetRecyclerAdapter2 adapter) {
+    public void setAdapter(SupetRecyclerAdapter adapter) {
         dRecyclerViewAdapter.setAdapter(adapter);
         super.setAdapter(dRecyclerViewAdapter);
     }
@@ -64,7 +64,7 @@ public class SupetRecyclerView2 extends RecyclerView {
         private static final int TYPE_HEADER_VIEW = Integer.MIN_VALUE;
         private static final int TYPE_FOOTER_VIEW = Integer.MIN_VALUE + 100;
 
-        private SupetRecyclerAdapter2 mInnerAdapter;
+        private SupetRecyclerAdapter mInnerAdapter;
 
         private ArrayList<View> mHeaderViews = new ArrayList<>();
         private ArrayList<View> mFooterViews = new ArrayList<>();
@@ -73,7 +73,7 @@ public class SupetRecyclerView2 extends RecyclerView {
         public SupetRecyclerViewAdapter() {
         }
 
-        public void setAdapter(SupetRecyclerAdapter2 myAdapter) {
+        public void setAdapter(SupetRecyclerAdapter myAdapter) {
             if (myAdapter == null) {
                 throw new RuntimeException("your adapter  not null");
             }
@@ -82,7 +82,7 @@ public class SupetRecyclerView2 extends RecyclerView {
             myAdapter.setRealRecyclerViewAdapter(this);
         }
 
-        public SupetRecyclerAdapter2 getInnerAdapter() {
+        public SupetRecyclerAdapter getInnerAdapter() {
             return mInnerAdapter;
         }
 
@@ -203,7 +203,7 @@ public class SupetRecyclerView2 extends RecyclerView {
 
             //是数据item 就调用原本的
             if (position >= headerViewsCountCount && position < headerViewsCountCount + mInnerAdapter.getItemCount()) {
-                mInnerAdapter.onBindViewHolder((SupetRecyclerViewHolder2) holder, position - headerViewsCountCount);
+                mInnerAdapter.onBindViewHolder((SupetRecyclerViewHolder) holder, position - headerViewsCountCount);
 
                 if (mInnerAdapter.isFullSpan(position-headerViewsCountCount)){
                     ViewGroup.LayoutParams layoutParams = holder.itemView.getLayoutParams();

@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 import com.supets.commons.utils.UIUtils;
 import com.supets.pet.supetsbaseui.R;
-import com.supets.pet.uiwidget.recyclelib.SupetRecyclerAdapter2;
-import com.supets.pet.uiwidget.recyclelib.SupetRecyclerView2;
+import com.supets.pet.uiwidget.recyclelib.SupetRecyclerAdapter;
+import com.supets.pet.uiwidget.recyclelib.SupetRecyclerView;
 import com.supets.pet.uiwidget.recyclelib.SupetRecyclerViewScrollListener;
 
 import in.srain.cube.views.ptr.PtrDefaultHandler;
@@ -21,13 +21,13 @@ import in.srain.cube.views.ptr.PtrHandler;
 /**
  * 无网络错误界面，只有正常和空情况。
  */
-public class PullToRefreshRecyclerView extends PullToRefreshBase<SupetRecyclerView2> implements PtrHandler {
+public class PullToRefreshRecyclerView extends PullToRefreshBase<SupetRecyclerView> implements PtrHandler {
 
     private FrameLayout mContent;
     private View mEmoptyView;
-    private SupetRecyclerView2 mListView;
+    private SupetRecyclerView mListView;
     private OnLoadMoreListener mOnLoadMoreListener;
-    private OnRefreshListener<SupetRecyclerView2> mListener;
+    private OnRefreshListener<SupetRecyclerView> mListener;
 
 
     private View mItemLoadingView;
@@ -49,7 +49,7 @@ public class PullToRefreshRecyclerView extends PullToRefreshBase<SupetRecyclerVi
     private void initview(AttributeSet attrs) {
         mContent = new FrameLayout(getContext());
         this.addViewForPtrFrameLayout(mContent);
-        mListView = new SupetRecyclerView2(getContext(), attrs);
+        mListView = new SupetRecyclerView(getContext(), attrs);
 
         mItemLoadingView = LayoutInflater.from(getContext()).inflate(R.layout.item_loadmore, null);
         mListView.addFooterView(mItemLoadingView);
@@ -169,11 +169,11 @@ public class PullToRefreshRecyclerView extends PullToRefreshBase<SupetRecyclerVi
         super.setRefreshing();
     }
 
-    public final SupetRecyclerView2 getRefreshableView() {
+    public final SupetRecyclerView getRefreshableView() {
         return mListView;
     }
 
-    public void setAdapter(SupetRecyclerAdapter2 adapter) {
+    public void setAdapter(SupetRecyclerAdapter adapter) {
         mListView.setAdapter(adapter);
     }
 
@@ -182,7 +182,7 @@ public class PullToRefreshRecyclerView extends PullToRefreshBase<SupetRecyclerVi
     }
 
     @Override
-    public void setOnRefreshListener(final OnRefreshListener<SupetRecyclerView2> refreshListener) {
+    public void setOnRefreshListener(final OnRefreshListener<SupetRecyclerView> refreshListener) {
         this.mListener = refreshListener;
     }
 

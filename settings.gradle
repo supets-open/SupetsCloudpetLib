@@ -11,6 +11,7 @@ include ':tools:grantlib'
 include ':tools:shareSDK'
 include ':tools:huanxin'
 include ':tools:easeui'
+include ':tools:gaodelib'
 //UI组件
 include ':ui:commonui'
 include ':ui:uiwidget'

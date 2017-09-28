@@ -46,8 +46,10 @@
             android:windowSoftInputMode="adjustResize" />
 
 
-        <!--&lt;!&ndash; 设置环信应用的AppKey &ndash;&gt;-->
-        <!--<meta-data android:name="EASEMOB_APPKEY"  android:value="1169170912115476#xunbao" />-->
+        <!-- 设置环信应用的AppKey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="1199170913178505#cloudpet" />
         <!-- 声明SDK所需的service SDK核心功能-->
         <service
             android:name="com.hyphenate.chat.EMChatService"
@@ -72,17 +74,6 @@
         <activity
             android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity"
             android:screenOrientation="portrait" />
-        <!--<activity-->
-            <!--android:name="com.hyphenate.easeui.ui.EaseBaiduMapActivity"-->
-            <!--android:screenOrientation="portrait" />-->
-        <!-- 百度地图所需的service -->
-        <!--<service-->
-            <!--android:name="com.baidu.location.f"-->
-            <!--android:enabled="true"-->
-            <!--android:process=":remote" />-->
-        <!--<meta-data-->
-            <!--android:name="com.baidu.lbsapi.API_KEY"-->
-            <!--android:value="3ecea51f560650b1ed8a4b99808f52e8" />-->
 
     </application>
 

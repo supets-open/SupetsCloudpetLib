@@ -14,7 +14,6 @@
       <module fileurl="file://$PROJECT_DIR$/base/baseutils/baseutils.iml" filepath="$PROJECT_DIR$/base/baseutils/baseutils.iml" />
       <module fileurl="file://$PROJECT_DIR$/ui/commonui/commonui.iml" filepath="$PROJECT_DIR$/ui/commonui/commonui.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/easeui/easeui.iml" filepath="$PROJECT_DIR$/tools/easeui/easeui.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tools/gaodelib/gaodelib.iml" filepath="$PROJECT_DIR$/tools/gaodelib/gaodelib.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/grantlib/grantlib.iml" filepath="$PROJECT_DIR$/tools/grantlib/grantlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/huanxin/huanxin.iml" filepath="$PROJECT_DIR$/tools/huanxin/huanxin.iml" />
       <module fileurl="file://$PROJECT_DIR$/ui/ptr-lib/ptr-lib.iml" filepath="$PROJECT_DIR$/ui/ptr-lib/ptr-lib.iml" />

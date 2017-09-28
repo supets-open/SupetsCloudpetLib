@@ -51,7 +51,7 @@ dependencies {
     compile "com.android.support:recyclerview-v7:${rootProject.ext.supportLibVersion}"
     compile "com.android.support:design:${rootProject.ext.supportLibVersion}"
 
-    compile project(":tools:easeui")
-    //compile "com.cloudpet.tools:easeui:1.1.0"
+    //compile project(":tools:easeui")
+    compile "com.cloudpet.tools:easeui:1.1.0"
 
 }

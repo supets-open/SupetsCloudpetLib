@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.supets.pet.multiimageselector">
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true">
+        <activity
+            android:name="com.supets.pet.preview.view.MultiImageViewPagerSelectorActivity"
+            android:theme="@style/FullscreenTheme" />
+    </application>
+
+</manifest>

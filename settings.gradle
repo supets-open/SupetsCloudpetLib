@@ -1,6 +1,6 @@
 ////基础库
 //include ':base:baserouter'
-//include ':base:basenet'
+include ':base:basenet'
 //include ':base:baseutils'
 //include ':base:basedata'
 ////三方组件
@@ -18,4 +18,4 @@
 //include ':ui:Emojicon'
 //include ':ui:ptr-lib'
 //include ':ui:themelib'
-include ':ui:photolib'
+//include ':ui:photolib'

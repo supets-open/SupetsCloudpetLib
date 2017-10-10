@@ -9,7 +9,6 @@ include ':tools:XiaonengChatUI'
 include ':tools:alipay'
 include ':tools:grantlib'
 include ':tools:shareSDK'
-include ':tools:huanxin'
 include ':tools:easeui'
 //UI组件
 include ':ui:commonui'

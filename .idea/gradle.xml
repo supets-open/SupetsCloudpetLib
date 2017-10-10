@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/base" />
             <option value="$PROJECT_DIR$/base/basedata" />
             <option value="$PROJECT_DIR$/base/basenet" />
+            <option value="$PROJECT_DIR$/base/baserouter" />
             <option value="$PROJECT_DIR$/base/baseutils" />
             <option value="$PROJECT_DIR$/tools" />
             <option value="$PROJECT_DIR$/tools/PushSDK311" />
@@ -18,7 +19,6 @@
             <option value="$PROJECT_DIR$/tools/alipay" />
             <option value="$PROJECT_DIR$/tools/easeui" />
             <option value="$PROJECT_DIR$/tools/grantlib" />
-            <option value="$PROJECT_DIR$/tools/huanxin" />
             <option value="$PROJECT_DIR$/tools/shareSDK" />
             <option value="$PROJECT_DIR$/ui" />
             <option value="$PROJECT_DIR$/ui/Emojicon" />

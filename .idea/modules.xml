@@ -10,11 +10,11 @@
       <module fileurl="file://$PROJECT_DIR$/base/base.iml" filepath="$PROJECT_DIR$/base/base.iml" />
       <module fileurl="file://$PROJECT_DIR$/base/basedata/basedata.iml" filepath="$PROJECT_DIR$/base/basedata/basedata.iml" />
       <module fileurl="file://$PROJECT_DIR$/base/basenet/basenet.iml" filepath="$PROJECT_DIR$/base/basenet/basenet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base/baserouter/baserouter.iml" filepath="$PROJECT_DIR$/base/baserouter/baserouter.iml" />
       <module fileurl="file://$PROJECT_DIR$/base/baseutils/baseutils.iml" filepath="$PROJECT_DIR$/base/baseutils/baseutils.iml" />
       <module fileurl="file://$PROJECT_DIR$/ui/commonui/commonui.iml" filepath="$PROJECT_DIR$/ui/commonui/commonui.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/easeui/easeui.iml" filepath="$PROJECT_DIR$/tools/easeui/easeui.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/grantlib/grantlib.iml" filepath="$PROJECT_DIR$/tools/grantlib/grantlib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tools/huanxin/huanxin.iml" filepath="$PROJECT_DIR$/tools/huanxin/huanxin.iml" />
       <module fileurl="file://$PROJECT_DIR$/ui/photolib/photolib.iml" filepath="$PROJECT_DIR$/ui/photolib/photolib.iml" />
       <module fileurl="file://$PROJECT_DIR$/ui/ptr-lib/ptr-lib.iml" filepath="$PROJECT_DIR$/ui/ptr-lib/ptr-lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/shareSDK/shareSDK.iml" filepath="$PROJECT_DIR$/tools/shareSDK/shareSDK.iml" />

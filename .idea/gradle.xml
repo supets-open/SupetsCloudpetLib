@@ -9,7 +9,25 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/base" />
+            <option value="$PROJECT_DIR$/base/basedata" />
             <option value="$PROJECT_DIR$/base/basenet" />
+            <option value="$PROJECT_DIR$/base/baseutils" />
+            <option value="$PROJECT_DIR$/tools" />
+            <option value="$PROJECT_DIR$/tools/PushSDK311" />
+            <option value="$PROJECT_DIR$/tools/XiaonengChatUI" />
+            <option value="$PROJECT_DIR$/tools/alipay" />
+            <option value="$PROJECT_DIR$/tools/easeui" />
+            <option value="$PROJECT_DIR$/tools/grantlib" />
+            <option value="$PROJECT_DIR$/tools/huanxin" />
+            <option value="$PROJECT_DIR$/tools/shareSDK" />
+            <option value="$PROJECT_DIR$/ui" />
+            <option value="$PROJECT_DIR$/ui/Emojicon" />
+            <option value="$PROJECT_DIR$/ui/commonui" />
+            <option value="$PROJECT_DIR$/ui/photolib" />
+            <option value="$PROJECT_DIR$/ui/ptr-lib" />
+            <option value="$PROJECT_DIR$/ui/themelib" />
+            <option value="$PROJECT_DIR$/ui/thirdui" />
+            <option value="$PROJECT_DIR$/ui/uiwidget" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

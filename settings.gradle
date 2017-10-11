@@ -9,10 +9,10 @@
 //include ':tools:alipay'
 //include ':tools:grantlib'
 //include ':tools:shareSDK'
-//include ':tools:easeui'
+include ':tools:easeui'
 ////UI组件
-include ':ui:commonui'
-include ':ui:uiwidget'
+//include ':ui:commonui'
+//include ':ui:uiwidget'
 //include ':ui:thirdui'
 //include ':ui:Emojicon'
 //include ':ui:ptr-lib'

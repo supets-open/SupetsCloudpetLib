@@ -3,7 +3,7 @@ apply plugin: 'com.android.library'
 
 apply plugin: 'maven'
 group = 'com.cloudpet.ui'
-version = '1.2.1'
+version = '1.2.2'
 
 uploadArchives {
     repositories {
@@ -52,7 +52,7 @@ dependencies {
     //compile  project(':ui:Emojicon')
     //compile  project(':ui:ptr-lib')
 
-    compile "com.cloudpet.ui:commonui:1.1.0"
+    compile "com.cloudpet.ui:commonui:1.1.1"
     compile "com.cloudpet.ui:Emojicon:1.0.0"
     compile "com.cloudpet.ui:ptr-lib:1.0.0"
 

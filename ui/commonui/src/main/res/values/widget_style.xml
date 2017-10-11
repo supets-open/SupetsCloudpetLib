@@ -2,7 +2,7 @@
 <resources>
 
     <!-- commonHeader -->
-    <color name="mia_commons_new_title_bar_bg">#f5f7fb</color>
+    <color name="mia_commons_new_title_bar_bg">#ffffff</color>
     <color name="mia_commons_new_title_bar_text_color">#262626</color>
     <color name="mia_commons_line_color">#e7e7e7</color>
     <color name="mia_commons_white">#ffffff</color>

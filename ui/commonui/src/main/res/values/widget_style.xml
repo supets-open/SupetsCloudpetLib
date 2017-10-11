@@ -2,9 +2,9 @@
 <resources>
 
     <!-- commonHeader -->
-    <color name="mia_commons_new_title_bar_bg">#fbfbfb</color>
-    <color name="mia_commons_new_title_bar_text_color">#333333</color>
-    <color name="mia_commons_line_color">#e5e5e5</color>
+    <color name="mia_commons_new_title_bar_bg">#f5f7fb</color>
+    <color name="mia_commons_new_title_bar_text_color">#262626</color>
+    <color name="mia_commons_line_color">#e7e7e7</color>
     <color name="mia_commons_white">#ffffff</color>
     <!-- commonHeader  -->
     <dimen name="mia_commons_title_bar_height">48dp</dimen>
@@ -18,7 +18,7 @@
     <color name="mia_commons_page_view_text">#666666</color>
     <color name="mia_commons_btn_reloaded_pressed">@color/mia_commons_app_color_pressed</color>
     <color name="mia_commons_btn_reloaded_normal">@color/mia_commons_color</color>
-    <color name="mia_commons_app_color_pressed">#7f4183ff</color>
+    <color name="mia_commons_app_color_pressed">#7fff6778</color>
     <!--pageView -->
     <dimen name="mia_commons_page_view_text">14sp</dimen>
     <!-- page view -->

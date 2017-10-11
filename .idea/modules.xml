@@ -2,27 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ui/Emojicon/Emojicon.iml" filepath="$PROJECT_DIR$/ui/Emojicon/Emojicon.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tools/PushSDK311/PushSDK311.iml" filepath="$PROJECT_DIR$/tools/PushSDK311/PushSDK311.iml" />
       <module fileurl="file://$PROJECT_DIR$/SupetsCloudpetLib.iml" filepath="$PROJECT_DIR$/SupetsCloudpetLib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tools/XiaonengChatUI/XiaonengChatUI.iml" filepath="$PROJECT_DIR$/tools/XiaonengChatUI/XiaonengChatUI.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tools/alipay/alipay.iml" filepath="$PROJECT_DIR$/tools/alipay/alipay.iml" />
-      <module fileurl="file://$PROJECT_DIR$/base/base.iml" filepath="$PROJECT_DIR$/base/base.iml" />
-      <module fileurl="file://$PROJECT_DIR$/base/basedata/basedata.iml" filepath="$PROJECT_DIR$/base/basedata/basedata.iml" />
-      <module fileurl="file://$PROJECT_DIR$/base/basenet/basenet.iml" filepath="$PROJECT_DIR$/base/basenet/basenet.iml" />
-      <module fileurl="file://$PROJECT_DIR$/base/baserouter/baserouter.iml" filepath="$PROJECT_DIR$/base/baserouter/baserouter.iml" />
-      <module fileurl="file://$PROJECT_DIR$/base/baseutils/baseutils.iml" filepath="$PROJECT_DIR$/base/baseutils/baseutils.iml" />
       <module fileurl="file://$PROJECT_DIR$/ui/commonui/commonui.iml" filepath="$PROJECT_DIR$/ui/commonui/commonui.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tools/easeui/easeui.iml" filepath="$PROJECT_DIR$/tools/easeui/easeui.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tools/grantlib/grantlib.iml" filepath="$PROJECT_DIR$/tools/grantlib/grantlib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ui/photolib/photolib.iml" filepath="$PROJECT_DIR$/ui/photolib/photolib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ui/ptr-lib/ptr-lib.iml" filepath="$PROJECT_DIR$/ui/ptr-lib/ptr-lib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tools/shareSDK/shareSDK.iml" filepath="$PROJECT_DIR$/tools/shareSDK/shareSDK.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ui/themelib/themelib.iml" filepath="$PROJECT_DIR$/ui/themelib/themelib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ui/thirdui/thirdui.iml" filepath="$PROJECT_DIR$/ui/thirdui/thirdui.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tools/tools.iml" filepath="$PROJECT_DIR$/tools/tools.iml" />
       <module fileurl="file://$PROJECT_DIR$/ui/ui.iml" filepath="$PROJECT_DIR$/ui/ui.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ui/uiwidget/uiwidget.iml" filepath="$PROJECT_DIR$/ui/uiwidget/uiwidget.iml" />
     </modules>
   </component>
 </project>

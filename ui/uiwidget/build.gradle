@@ -52,7 +52,7 @@ dependencies {
     //compile  project(':ui:Emojicon')
     //compile  project(':ui:ptr-lib')
 
-    compile "com.cloudpet.ui:commonui:1.0.0"
+    compile "com.cloudpet.ui:commonui:1.1.0"
     compile "com.cloudpet.ui:Emojicon:1.0.0"
     compile "com.cloudpet.ui:ptr-lib:1.0.0"
 

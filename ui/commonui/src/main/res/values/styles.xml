@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="mia_commons_color">#4183ff</color>
+    <color name="mia_commons_color">#ff6778</color>
 
     <style name="mia_commons_line_horizontal">
         <item name="android:layout_width">match_parent</item>

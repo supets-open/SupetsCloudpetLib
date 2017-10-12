@@ -9,7 +9,8 @@
 //include ':tools:alipay'
 //include ':tools:grantlib'
 //include ':tools:shareSDK'
-include ':tools:easeui'
+//include ':tools:easeui'
+include ':tools:walle'
 ////UI组件
 //include ':ui:commonui'
 //include ':ui:uiwidget'

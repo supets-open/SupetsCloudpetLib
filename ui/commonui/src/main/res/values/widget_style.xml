@@ -15,7 +15,7 @@
     <dimen name="mia_commons_line_1px">0.5dp</dimen>
 
     <!--pageView -->
-    <color name="mia_commons_page_view_text">#666666</color>
+    <color name="mia_commons_page_view_text">#999999</color>
     <color name="mia_commons_btn_reloaded_pressed">@color/mia_commons_app_color_pressed</color>
     <color name="mia_commons_btn_reloaded_normal">@color/mia_commons_color</color>
     <color name="mia_commons_app_color_pressed">#7fff6778</color>
@@ -25,7 +25,7 @@
     <string name="mia_commons_page_view_empty">暂无数据</string>
     <string name="mia_commons_page_view_loading">正在加载&#8230;</string>
     <string name="mia_commons_no_more_data_hint">没有更多内容了</string>
-    <string name="mia_commons_network_error_hint">网络异常，请检查网络</string>
+    <string name="mia_commons_network_error_hint">啊哦，网络好像断了~</string>
     <string name="mia_commons_network_error_refresh">重新加载</string>
     <style name="button_network_error_reloaded" parent="mia_commons_button">
         <item name="android:textColor">@drawable/mia_commons_color_reloaded_text_selector</item>

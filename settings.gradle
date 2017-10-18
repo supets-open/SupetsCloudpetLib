@@ -12,8 +12,8 @@
 //include ':tools:easeui'
 include ':tools:walle'
 ////UI组件
-//include ':ui:commonui'
-//include ':ui:uiwidget'
+include ':ui:commonui'
+include ':ui:uiwidget'
 //include ':ui:thirdui'
 //include ':ui:Emojicon'
 //include ':ui:ptr-lib'

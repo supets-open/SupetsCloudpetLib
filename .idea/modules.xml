@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SupetsCloudpetLib.iml" filepath="$PROJECT_DIR$/SupetsCloudpetLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ui/commonui/commonui.iml" filepath="$PROJECT_DIR$/ui/commonui/commonui.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/tools.iml" filepath="$PROJECT_DIR$/tools/tools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ui/ui.iml" filepath="$PROJECT_DIR$/ui/ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ui/uiwidget/uiwidget.iml" filepath="$PROJECT_DIR$/ui/uiwidget/uiwidget.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/walle/walle.iml" filepath="$PROJECT_DIR$/tools/walle/walle.iml" />
     </modules>
   </component>

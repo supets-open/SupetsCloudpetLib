@@ -79,7 +79,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="15dp"
-            android:text="@string/xuanzhe"
+            android:text="@string/m_photo_xuanzhe"
             android:textColor="@android:color/white"
             android:textSize="20sp" />
 

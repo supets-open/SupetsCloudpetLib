@@ -3,9 +3,9 @@
     android:shape="rectangle">
 
     <gradient
-        android:centerColor="@color/transparent"
-        android:endColor="@color/transparent"
-        android:startColor="@color/transparent"
+        android:centerColor="@color/m_photo_transparent"
+        android:endColor="@color/m_photo_transparent"
+        android:startColor="@color/m_photo_transparent"
         android:type="linear" />
     <size
         android:width="@dimen/camera_picture_divheight"

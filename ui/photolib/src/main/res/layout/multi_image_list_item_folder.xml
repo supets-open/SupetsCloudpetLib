@@ -15,9 +15,9 @@
         android:layout_centerVertical="true"
         android:id="@+id/cover"
         android:layout_gravity="center_vertical"
-        android:layout_width="@dimen/px100"
-        android:layout_height="@dimen/px100"
-        fresco:placeholderImage="@drawable/place_holder"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        fresco:placeholderImage="@drawable/m_photo_place_holder"
         fresco:placeholderImageScaleType="centerCrop"
         />
 

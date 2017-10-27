@@ -27,7 +27,7 @@ public class ImageGridAdapter extends
     private List<Image> mImages = new ArrayList<>();
     private List<Image> mSelectedImages = new ArrayList<>();
     private int cellHeight = 240;
-    private int isTa=0;
+    private int isTa = 0;
 
     public ImageGridAdapter(Context context) {
         mContext = context;
@@ -51,8 +51,9 @@ public class ImageGridAdapter extends
     }
 
     public void setShowCamera(boolean b) {
-        if (showCamera == b)
+        if (showCamera == b) {
             return;
+        }
 
         showCamera = b;
         notifyDataSetChanged();

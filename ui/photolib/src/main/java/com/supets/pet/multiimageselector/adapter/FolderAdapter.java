@@ -46,8 +46,9 @@ public class FolderAdapter extends BaseAdapter {
 
     @Override
     public Folder getItem(int i) {
-        if (i == 0)
+        if (i == 0) {
             return null;
+        }
         return mFolders.get(i - 1);
     }
 
@@ -105,8 +106,9 @@ public class FolderAdapter extends BaseAdapter {
     }
 
     public void setSelectIndex(int i) {
-        if (lastSelected == i)
+        if (lastSelected == i) {
             return;
+        }
 
         lastSelected = i;
         notifyDataSetChanged();

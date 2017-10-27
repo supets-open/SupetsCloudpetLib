@@ -1,7 +1,3 @@
-/*
- * Date: 14-8-18
- * Project: Access-Control-V2
- */
 package com.supets.pet.preview.adapter;
 
 import android.view.View;

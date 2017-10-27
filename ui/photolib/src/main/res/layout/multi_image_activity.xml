@@ -2,12 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_page"
+    android:background="@color/m_photo_bg_page"
     >
 
     <include
         android:layout_width="match_parent"
-        android:layout_height="@dimen/title_bar_height"
+        android:layout_height="@dimen/m_photo_title_bar_height"
         android:id="@+id/header"
         layout="@layout/multi_image_customer_actionbar" />
 

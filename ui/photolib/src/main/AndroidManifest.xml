@@ -6,7 +6,7 @@
         android:supportsRtl="true">
         <activity
             android:name="com.supets.pet.preview.view.MultiImageViewPagerSelectorActivity"
-            android:theme="@style/FullscreenTheme" />
+            android:theme="@style/m_photo_FullscreenTheme" />
     </application>
 
 </manifest>

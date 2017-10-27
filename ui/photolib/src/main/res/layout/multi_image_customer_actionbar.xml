@@ -3,13 +3,13 @@
     android:id="@+id/wholeView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/new_title_bar_bg">
+    android:background="@color/m_photo_new_title_bar_bg">
 
     <LinearLayout
         android:id="@+id/header_left"
         android:layout_width="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_height="@dimen/title_bar_height"
+        android:layout_height="@dimen/m_photo_title_bar_height"
         android:layout_alignParentLeft="true">
 
         <TextView
@@ -20,14 +20,14 @@
             android:background="@drawable/icon_login_close"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="@dimen/sp38" />
+            android:textSize="19sp" />
     </LinearLayout>
 
 
     <LinearLayout
         android:id="@+id/header_right"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/title_bar_height"
+        android:layout_height="@dimen/m_photo_title_bar_height"
         android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
         android:gravity="right|center_vertical"
@@ -39,20 +39,20 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:gravity="center"
-            android:paddingLeft="@dimen/px20"
-            android:paddingRight="@dimen/px20"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:textColor="#70000000"
-            android:textSize="@dimen/sp32"
+            android:textSize="16sp"
             android:visibility="gone" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginLeft="@dimen/px100"
-        android:layout_marginRight="@dimen/px100"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
         android:id="@+id/header_center"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/title_bar_height"
+        android:layout_height="@dimen/m_photo_title_bar_height"
         android:layout_centerInParent="true"
         android:layout_centerVertical="true"
         android:gravity="center"
@@ -76,7 +76,7 @@
 
     <View
         android:id="@+id/bottom_line"
-        style="@style/line_horizontal"
+        style="@style/m_photo_line_horizontal"
         android:layout_alignParentBottom="true" />
 
 </RelativeLayout>

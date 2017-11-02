@@ -70,6 +70,10 @@ public class PullToRefreshPageLoadRecyclerView extends PullToRefreshBase<SupetRe
         this.setPtrHandler(this);
     }
 
+    public PageLoadingView getPageLoadingView() {
+        return mContent;
+    }
+
     public SupetRecyclerViewScrollListener mLoadMoreScrollListener = new SupetRecyclerViewScrollListener() {
         @Override
         public void onLoadNextPage(RecyclerView view) {

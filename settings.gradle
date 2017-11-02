@@ -13,9 +13,9 @@
 //include ':tools:walle'
 ////UI组件
 //include ':ui:commonui'
-//include ':ui:uiwidget'
+include ':ui:uiwidget'
 //include ':ui:thirdui'
 //include ':ui:Emojicon'
 //include ':ui:ptr-lib'
 //include ':ui:themelib'
-include ':ui:photolib'
+//include ':ui:photolib'

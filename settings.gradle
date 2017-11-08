@@ -6,14 +6,14 @@
 ////三方组件
 //include ':tools:PushSDK311'
 //include ':tools:XiaonengChatUI'
-//include ':tools:alipay'
+include ':tools:alipay'
 //include ':tools:grantlib'
 //include ':tools:shareSDK'
 //include ':tools:easeui'
 //include ':tools:walle'
 ////UI组件
 //include ':ui:commonui'
-include ':ui:uiwidget'
+//include ':ui:uiwidget'
 //include ':ui:thirdui'
 //include ':ui:Emojicon'
 //include ':ui:ptr-lib'

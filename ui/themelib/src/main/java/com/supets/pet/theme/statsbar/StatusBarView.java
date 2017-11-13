@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.supets.pet.theme.R;
+
 public class StatusBarView extends TextView {
 
     public StatusBarView(Context context, AttributeSet attrs) {
@@ -50,7 +52,7 @@ public class StatusBarView extends TextView {
 
     public void adjustHeight() {
         if (isSupportTranslucent()) {
-            int height = getStatusBarHeight();
+            int height = getContext().getResources().getDimensionPixelSize(R.dimen.status_bar_height);
             Log.v("getStatusBarHeight", String.valueOf(height));
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT,

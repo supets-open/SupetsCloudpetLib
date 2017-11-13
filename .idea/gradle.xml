@@ -9,7 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/ui" />
-            <option value="$PROJECT_DIR$/ui/uiwidget" />
+            <option value="$PROJECT_DIR$/ui/themelib" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

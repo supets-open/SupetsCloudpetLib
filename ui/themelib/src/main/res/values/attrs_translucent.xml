@@ -13,4 +13,5 @@
         </attr>
     </declare-styleable>
 
+    <dimen name="status_bar_height">48dp</dimen>
 </resources>

@@ -1,7 +1,10 @@
 package com.supets.lib.supetsrouter.di;
 
+import android.support.annotation.Keep;
+
 import java.lang.reflect.Field;
 
+@Keep
 public class ModuleDI {
 
     public static void injectField(Object target) {

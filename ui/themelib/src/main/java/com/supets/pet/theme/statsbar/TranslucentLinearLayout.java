@@ -115,7 +115,6 @@ public class TranslucentLinearLayout extends LinearLayout implements ITranslucen
         if (isSupportTranslucent()) {
             if (mStausBarView == null) {
                 mStausBarView =new StatusBarView(getContext());
-                mStausBarView.adjustHeight();
                 addView(mStausBarView, 0);
             }
             mStausBarView.setTranslucentColor(alpha, colors);
@@ -127,7 +126,6 @@ public class TranslucentLinearLayout extends LinearLayout implements ITranslucen
         if (isSupportTranslucent()) {
             if (mStausBarView == null) {
                 mStausBarView =new StatusBarView(getContext());
-                mStausBarView.adjustHeight();
                 addView(mStausBarView, 0);
             }
             mStausBarView.setTranslucentColor2(colors);

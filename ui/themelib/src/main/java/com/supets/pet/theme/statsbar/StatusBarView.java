@@ -8,28 +8,23 @@ import android.support.annotation.DrawableRes;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.supets.pet.theme.R;
 
 public class StatusBarView extends TextView {
 
     public StatusBarView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        adjustHeight();
+        controlVisible();
     }
 
     public StatusBarView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        adjustHeight();
+        controlVisible();
     }
-
 
     public StatusBarView(Context context) {
         super(context);
-        adjustHeight();
+        controlVisible();
     }
 
     public void setTranslucentColor(int alpha, @ColorRes int resId) {
@@ -45,22 +40,25 @@ public class StatusBarView extends TextView {
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT && IBarConfig.isSupport;
     }
 
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        int width = MeasureSpec.getSize(widthMeasureSpec);
+        int height = getStatusBarHeight();
+        Log.v("getStatusBarHeight", String.valueOf(height));
+        setMeasuredDimension(width, height);
+    }
+
     public int getStatusBarHeight() {
         int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
         return getResources().getDimensionPixelSize(resourceId);
     }
 
-    public void adjustHeight() {
+    private void controlVisible() {
         if (isSupportTranslucent()) {
-            int height = getContext().getResources().getDimensionPixelSize(R.dimen.status_bar_height);
-            Log.v("getStatusBarHeight", String.valueOf(height));
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT,
-                    height);
-            setLayoutParams(params);
             setVisibility(View.VISIBLE);
         } else {
             setVisibility(View.GONE);
         }
     }
+
 }

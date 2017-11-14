@@ -4,7 +4,7 @@
 //include ':base:baseutils'
 //include ':base:basedata'
 ////三方组件
-//include ':tools:PushSDK311'
+include ':tools:PushSDK311'
 //include ':tools:XiaonengChatUI'
 //include ':tools:alipay'
 //include ':tools:grantlib'
@@ -17,5 +17,5 @@
 //include ':ui:thirdui'
 //include ':ui:Emojicon'
 //include ':ui:ptr-lib'
-include ':ui:themelib'
+//include ':ui:themelib'
 //include ':ui:photolib'

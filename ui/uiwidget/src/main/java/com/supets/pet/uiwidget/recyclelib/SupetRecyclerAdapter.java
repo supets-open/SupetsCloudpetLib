@@ -174,12 +174,6 @@ public abstract class SupetRecyclerAdapter {
         this.notifyItemRangeChanged(position, temp.size());
     }
 
-    public void remove(int position) {
-        this.mDatas.remove(position);
-        this.notifyItemRemoved(position);
-        notifyItemRangeChanged(0, getItemCount() - position);
-    }
-
     private boolean isDelete = false;
 
     public void removeAnim(int position) {

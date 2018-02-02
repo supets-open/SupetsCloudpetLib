@@ -1,6 +1,7 @@
 package com.supets.pet.uiwidget.recyclelib;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 
@@ -159,4 +160,55 @@ public abstract class SupetRecyclerAdapter {
     public boolean isEmpty() {
         return mDatas.isEmpty();
     }
+
+
+    public <T extends MYData>  void insert(int position, T temp) {
+        this.mDatas.add(position, temp);
+        this.notifyItemInserted(position);
+        this.notifyItemRangeChanged(position, 1);
+    }
+
+    public <T extends MYData>  void insert(int position, List<T> temp) {
+        this.mDatas.addAll(position, temp);
+        this.notifyItemInserted(position);
+        this.notifyItemRangeChanged(position, temp.size());
+    }
+
+    public void remove(int position) {
+        this.mDatas.remove(position);
+        this.notifyItemRemoved(position);
+        notifyItemRangeChanged(0, getItemCount() - position);
+    }
+
+    private boolean isDelete = false;
+
+    public void removeAnim(int position) {
+        if (!isDelete) {
+            isDelete = true;
+            //有动画快速删除，任意出现数组越界异常
+            if (position < mDatas.size() && mDatas.size() > 0) {
+                mDatas.remove(position);
+                notifyItemRemoved(position);
+                notifyItemRangeChanged(0, getItemCount() - position);
+            } else {
+                Log.v(this.getClass().getSimpleName(),
+                        "删除异常了");
+            }
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        Thread.sleep(500);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    isDelete = false;
+                }
+            }).start();
+        } else {
+            Log.v(this.getClass().getSimpleName(),
+                    "兄弟，手速慢点");
+        }
+    }
+
 }
